@@ -15,6 +15,7 @@
 //#include <fcntl.h>
 #define _FCNTL_H
 #include <bits/fcntl.h>
+#define AT_FDCWD -100
 
 
 static int absolutize_path(char *outpath, int outpath_s, const char* pathname, int dirfd) {
