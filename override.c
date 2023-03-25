@@ -15,6 +15,7 @@
 //#include <fcntl.h>
 #define _FCNTL_H
 #include <bits/fcntl.h>
+#define AT_FDCWD -100
 
 
 static int absolutize_path(char *outpath, int outpath_s, const char* pathname, int dirfd) {
@@ -144,7 +145,7 @@ static void initialize() {
     }
 
     char buffer[MAXPATH];
-    int buffer_level;
+    int buffer_level = 0;
     int its_key_now = 1;
     for(;;) {
         if (n_overrides >= MAXOVERRIDES) {
