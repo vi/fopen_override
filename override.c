@@ -145,7 +145,7 @@ static void initialize() {
     }
 
     char buffer[MAXPATH];
-    int buffer_level;
+    int buffer_level = 0;
     int its_key_now = 1;
     for(;;) {
         if (n_overrides >= MAXOVERRIDES) {
